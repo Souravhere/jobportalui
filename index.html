@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(247 246 241);
+}
+
+.main{
+    overflow: hidden;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
+}
+button {
+    padding: 10px 15px;
+    background-color: transparent;
+    border:1px solid rgb(96, 96, 96);
+    border-radius: 15px;
+    font-weight: 600;
+}
+.login{
+    margin: 0 10px;
+}
+.sign button{
+    background-color: #000;
+    color: #fff;
+}
+.menu-button {
+    display: none;
+}
+.cat-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40vh;
+    margin: 5% 10px;
+    padding: 10px 20px;
+}
+.cat-btn{
+    margin:  10px 0 20px 0;
+}
+.lables{
+    margin-top: 20px;
+}
+.cat-right{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: linear-gradient( red , blue);
+    filter: blur(80px);
+}
+.line{
+    width: 92%;
+    height: 2px;
+    background-color: #9e9b9b;
+    margin: 0 4%;
+    border-radius: 12px; 
+}
+.job-card{
+    margin: 15px 4%;
+}
+.job-card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cat-bottom{
+    height: 40vh;
+    text-align: center;
+    margin: 20px 0;
+}
+.about-me img{
+    margin-top: 20px;
+    height: 80px;
+    width:80px;
+    border-radius: 50%;
+}
+.bottom-colorbox {
+    height: 80px;
+    width: 80px;
+    background: linear-gradient(blue, rgb(117, 107, 253));
+    filter: blur(50px);
+}
+.text-strip{
+    margin: 0;
+    height: 25px;
+    background-color: #000;
+    color: #fff;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.text-strip ul {
+    white-space: nowrap;
+    overflow: hidden;
+    list-style-type: circle;
+    padding: 0;
+    animation: slide 20s linear infinite; 
+    animation-delay: -10s; 
+}
+
+.text-strip li {
+    display: inline-block;
+    padding-right: 20px; 
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.foot-links ul{
+    list-style-type: none;
+}
+.foot-links p {
+    font-weight: 600;
+    color:#858282;
+    margin-bottom: 8px;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+@media (max-width:600px) {
+    .header{
+        display:block;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo{
+        font-size: small;
+    }
+    .nav{
+        display:none ;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background-color:rgb(247 245 240);
+        align-items: center;
+        justify-content: space-between;
+        margin: -50px -20px;
+    }
+    .nav ul{
+        display: block;
+        list-style-type: none;
+        margin: 20px 0 0 20px;
+    }
+    .nav ul::before {
+        content: "Sourav UI";
+        font-size:xx-large;
+        font-weight: 600;
+    }
+    .nav li {
+        margin-top: 0px;
+        font-size: xx-large;
+    }
+    .login{
+        padding: 0px 0px;
+    }
+    .sign button{
+        background-color: #000;
+        color: #fff;
+    }
+    .menu-button {
+        display:block;
+        position:fixed;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        top: 10px;
+        right: 10px;
+    }
+    .cat-section{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        margin: 1% 5px;
+        padding: 10px 20px;
+    }
+    .cat-btn{
+        margin:  10px 5px 20px 0;
+    }
+    .lables{
+        margin-top: 20px;
+    }
+    .lables button {
+        margin-top: 5px;
+    }
+    .cat-bottom{
+        height: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .cat-bottom h1 {
+        font-size: larger;
+        padding:  0 20px;
+    }
+    .about-me img{
+        margin-top: 20px;
+        height: 80px;
+        width:80px;
+        border-radius: 50%;
+    }
+    .copyright{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 30px;
+        font-size: small;
+        margin: 12px 10px;
+    }
+}
+</style>
+    <title>Sourav UI</title>
+</head>
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="logo">
+                <h1>Sourav UI</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <a href=""><li>Home</li></a>
+                    <a href=""><li>Pricing</li></a>
+                    <a href=""><li>How it works</li></a>
+                    <a href=""><li>Resources</li></a>
+                </ul>
+                <a class="login" href=""><button>Log in</button></a>
+                <a class="sign" href=""><button>Sign up</button></a>
+            </nav>
+        </header>
+        <button class="menu-button"><i class="ri-menu-3-fill"></i></button>
+        <div class="cat-section">
+            <div class="cat-left">
+                <button class="cat-btn">We're hiring!</button>
+                <h1>Be part of our mission</h1>
+                <p>We're looling for passionate people to join on our mission. We value <br> falt hierarchies, clear communication,and full ownership and responsibillity.</p>
+                <div class="lables">
+                    <button>View all</button>
+                    <button>Development</button>
+                    <button>Design</button>
+                    <button>Marketing</button>
+                    <button>Customer Service</button>
+                    <button>Operations</button>
+                    <button>Finance</button>
+                    <button>Management</button>
+                </div>
+            </div>
+            <div class="cat-right"></div>
+        </div>
+        <div class="line"></div>
+        <div class="job-card">
+            <div class="job-card-header">
+                <h3>Product Designer</h3>
+                <h3>Apply <i class="ri-arrow-right-up-line"></i></h3>
+            </div>
+            <p>We're looking for a mid-level product designer to join our team.</p>
+            <div class="lables">
+                <button><i class="ri-map-pin-line"></i> 100% remote</button>
+                <button><i class="ri-time-line"></i> Full-time</button>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="job-card">
+            <div class="job-card-header">
+                <h3>Engineering Manager</h3>
+                <h3>Apply <i class="ri-arrow-right-up-line"></i></h3>
+            </div>
+            <p>We're looking for an experienced Engineering Manager to join our team.</p>
+            <div class="lables">
+                <button><i class="ri-map-pin-line"></i> 100% remote</button>
+                <button><i class="ri-time-line"></i> Full-time</button>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="job-card">
+            <div class="job-card-header">
+                <h3>Customer Success Manager</h3>
+                <h3>Apply <i class="ri-arrow-right-up-line"></i></h3>
+            </div>
+            <p>We're looking for a Customer Success Manager to join our team.</p>
+            <div class="lables">
+                <button><i class="ri-map-pin-line"></i> 100% remote</button>
+                <button><i class="ri-time-line"></i> Full-time</button>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="job-card">
+            <div class="job-card-header">
+                <h3>Account Executive</h3>
+                <h3>Apply <i class="ri-arrow-right-up-line"></i></h3>
+            </div>
+            <p>We're looking for an Account Executive to join our team.</p>
+            <div class="lables">
+                <button><i class="ri-map-pin-line"></i> 100% remote</button>
+                <button><i class="ri-time-line"></i> Full-time</button>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="job-card">
+            <div class="job-card-header">
+                <h3>SEO Marketing</h3>
+                <h3>Apply <i class="ri-arrow-right-up-line"></i></h3>
+            </div>
+            <p>We're looking for a mid-level product designer to join our team.</p>
+            <div class="lables">
+                <button><i class="ri-map-pin-line"></i> 100% remote</button>
+                <button><i class="ri-time-line"></i> Full-time</button>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="cat-bottom">
+            <h1>Untitled truly values work-life balance. We word hard and <br>deliver, but at the end of the day you can switch off.</h1>
+            <div class="about-me">
+                <img src="https://media.licdn.com/dms/image/D4D03AQGbEddbsd4nwA/profile-displayphoto-shrink_800_800/0/1697043561061?e=2147483647&v=beta&t=KyqcduhmIXhJSvTFjb_qhJPIDE1hHOhjGW7rvX6J1Ww" alt="">
+                <h4>Sourav Chhimpa</h4>
+                <h5>Web Developer</h5>
+            </div>
+            <div class="bottom-colorbox"></div>
+        </div>
+        <div class="text-strip">
+            <ul>
+                <li>How it works</li>
+                <li>Documentation</li>
+                <li>Join the community</li>
+                <li>Subscribe to our newsletter</li>
+                <li>How it works</li>
+                <li>Documentation</li>
+                <li>Join the community</li>
+                <li>Subscribe to our newsletter</li>
+                <li>How it works</li>
+                <li>Documentation</li>
+                <li>Join the community</li>
+                <li>Subscribe to our newsletter</li>
+                <li>How it works</li>
+                <li>Documentation</li>
+                <li>Join the community</li>
+                <li>Subscribe to our newsletter</li>
+                <li>How it works</li>
+                <li>Documentation</li>
+                <li>Join the community</li>
+                <li>Subscribe to our newsletter</li>
+                <li>How it works</li>
+                <li>Documentation</li>
+                <li>Join the community</li>
+                <li>Subscribe to our newsletter</li>
+            </ul>
+        </div>
+        <footer class="footer">
+            <div class="foot-links">
+                <p>Product</p>
+                <ul>
+                    <a href=""><li>Overview</li></a>
+                    <a href=""><li>Features</li></a>
+                    <a href=""><li>Solutions</li></a>
+                    <a href=""><li>Tutorials</li></a>
+                    <a href=""><li>Pricing</li></a>
+                    <a href=""><li>Releases</li></a>
+                </ul>
+            </div>
+            <div class="foot-links">
+                <p>Company</p>
+                <ul>
+                    <a href=""><li>About Us</li></a>
+                    <a href=""><li>Careers</li></a>
+                    <a href=""><li>Press</li></a>
+                    <a href=""><li>News</li></a>
+                    <a href=""><li>Medical kit</li></a>
+                    <a href=""><li>Contact</li></a>
+                </ul>
+            </div>
+            <div class="foot-links">
+                <p>Resources</p>
+                <ul>
+                    <a href=""><li>Blog</li></a>
+                    <a href=""><li>Newsletter</li></a>
+                    <a href=""><li>Events</li></a>
+                    <a href=""><li>Help centre</li></a>
+                    <a href=""><li>Tutorials</li></a>
+                    <a href=""><li>Support</li></a>
+                </ul>
+            </div>
+            <div class="foot-links">
+                <p>Social</p>
+                <ul>
+                    <a href="https://twitter.com/SouravChhimpa1"><li>X</li></a>
+                    <a href="https://www.instagram.com/sourav_chhimpa/"><li>Instagram</li></a>
+                    <a href="https://in.linkedin.com/in/sourav-chhimpa"><li>LinkedIn</li></a>
+                    <a href="https://github.com/souravhere/"><li>GitHub</li></a>
+                    <a href=""><li>AngleList</li></a>
+                    <a href=""><li>Dribble</li></a>
+                </ul>
+            </div>
+        </footer>
+        <div class="copyright">
+            <h2>Sourav ui</h2>
+            <p>	&copy; <a href="">Sourav.</a> All rights reserved</p>
+        </div>
+    </div>
+    <script>
+        const list = document.querySelector('.nav')
+        const btn = document.querySelector('.menu-button');
+        btn.addEventListener('click', () => {
+            if(list.style.display === 'block'){
+                list.style.display = 'none'
+                btn.innerHTML = "<i class='ri-menu-3-fill'>"
+            }else{
+                list.style.display = 'block'
+                btn.innerHTML = "&#10005;"
+
+            }
+        })
+    </script>
+</body>
+</html>
